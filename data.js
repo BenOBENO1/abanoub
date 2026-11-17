@@ -17,7 +17,7 @@ window.SITE = {
   email: "abanoubbarsoum7@gmail.com",
   linkedin: "https://www.linkedin.com/in/abanoub-barsoum",
   github: "",                       // add your GitHub URL here when you have it
-  cv: "assets/Abanoub_Barsoum_CV.pdf",
+  cv: "Abanoub_Barsoum_CV.pdf",
 
   // After you create a free account at goatcounter.com, put your site code here.
   // Example: if your dashboard is abanoub.goatcounter.com, write "abanoub".
@@ -120,10 +120,10 @@ window.PROJECTS = [
       "Sides carry the highest menu margin (76.8%) and grills the lowest (62.8%)."
     ],
     images: [
-      { src: "assets/overview.png",   caption: "Overview: sales and margin by branch, monthly trend", alt: "Overview page of the Power BI report" },
-      { src: "assets/operations.png", caption: "Operations: waste, cancellations, discounts and ratings", alt: "Operations and cost control page" },
-      { src: "assets/menu.png",       caption: "Menu: gross profit by item and margin by category", alt: "Menu and seasons page" },
-      { src: "assets/simulator.png",  caption: "Scenario simulator and branch KPI scorecard", alt: "Scenario simulator page" }
+      { src: "overview.png",   caption: "Overview: sales and margin by branch, monthly trend", alt: "Overview page of the Power BI report" },
+      { src: "operations.png", caption: "Operations: waste, cancellations, discounts and ratings", alt: "Operations and cost control page" },
+      { src: "menu.png",       caption: "Menu: gross profit by item and margin by category", alt: "Menu and seasons page" },
+      { src: "simulator.png",  caption: "Scenario simulator and branch KPI scorecard", alt: "Scenario simulator page" }
     ],
     links: [
       { label: "View on GitHub", url: "" }   // paste the project repo link, or leave empty to hide the button
