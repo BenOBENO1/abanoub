@@ -11,19 +11,19 @@
 <style>
 :root{
   --bg:#F6F8FA; --paper:#FFFFFF; --ink:#14212B; --muted:#52636F;
-  --line:#D9E2E8; --accent:#0B5FA5; --accent-ink:#FFFFFF; --green:#1E7B4F;
+  --line:#D9E2E8; --accent:#0B5FA5; --accent-ink:#FFFFFF; --green:#1E7B4F; --warn:#C2410C;
   --head:"Bricolage Grotesque","Segoe UI",system-ui,sans-serif;
   --body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
 }
 @media (prefers-color-scheme:dark){
-  :root{--bg:#0F1A22; --paper:#16252F; --ink:#E7EEF3; --muted:#9DB0BC; --line:#28404F; --accent:#5AB0F0; --accent-ink:#0F1A22; --green:#5CC796;}
+  :root{--bg:#0F1A22; --paper:#16252F; --ink:#E7EEF3; --muted:#9DB0BC; --line:#28404F; --accent:#5AB0F0; --accent-ink:#0F1A22; --green:#5CC796; --warn:#F4A582;}
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth;scroll-padding-top:56px}
 body{margin:0;background:var(--bg);color:var(--ink);font:400 1.0625rem/1.6 var(--body)}
 a{color:var(--accent)}
 :focus-visible{outline:3px solid var(--accent);outline-offset:3px}
-.wrap{max-width:960px;margin:0 auto;padding:0 20px}
+.wrap{max-width:1000px;margin:0 auto;padding:0 20px}
 h1,h2,h3,h4{font-family:var(--head);line-height:1.15;margin:0}
 
 /* Navigation */
@@ -35,28 +35,34 @@ h1,h2,h3,h4{font-family:var(--head);line-height:1.15;margin:0}
 .nav a{color:var(--muted);text-decoration:none;font-size:.95rem}
 .nav a:hover{color:var(--accent);text-decoration:underline}
 
-/* Hero: a spreadsheet, because that is where the work starts */
-.hero{padding:36px 0 56px;
-  background-image:linear-gradient(var(--line) 1px,transparent 1px),linear-gradient(90deg,var(--line) 1px,transparent 1px);
-  background-size:64px 40px;border-bottom:1px solid var(--line)}
-.sheet{background:var(--paper);border:1px solid var(--line);margin-bottom:28px;overflow:hidden}
-.fbar{display:flex;gap:12px;align-items:center;padding:6px 12px;border-bottom:1px solid var(--line);font-size:.95rem;color:var(--muted)}
-.fbar #formula{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
-.fx{font-style:italic;font-weight:600;color:var(--green)}
-.cols{display:grid;grid-template-columns:36px repeat(5,1fr);font-size:.8rem;color:var(--muted)}
-.cols span{padding:3px 0;text-align:center;border-right:1px solid var(--line)}
-.cols span:last-child{border-right:0}
+/* Hero: text on the left, a small dashboard on the right */
+.hero{padding:48px 0 56px;border-bottom:1px solid var(--line)}
+.herogrid{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
 .badge{display:inline-flex;align-items:center;gap:8px;background:var(--paper);border:1px solid var(--line);padding:4px 12px;font-size:.95rem;margin-bottom:16px}
 .badge::before{content:"";width:9px;height:9px;border-radius:50%;background:var(--green)}
-.cell{display:inline-block;position:relative;background:var(--paper);border:2px solid var(--accent);padding:6px 16px 8px}
-.cell::after{content:"";position:absolute;right:-6px;bottom:-6px;width:9px;height:9px;background:var(--accent);border:2px solid var(--paper)}
-h1{font-size:clamp(2rem,8vw,4rem);letter-spacing:-.02em}
-.role{font-family:var(--head);font-weight:600;font-size:1.3rem;margin:22px 0 6px}
-.lede{max-width:60ch;margin:0 0 22px;color:var(--muted)}
+h1{font-size:clamp(2.2rem,8vw,3.8rem);letter-spacing:-.02em}
+.role{font-family:var(--head);font-weight:600;font-size:1.3rem;margin:16px 0 0;padding-top:16px;border-top:4px solid var(--accent);display:inline-block}
+.lede{max-width:56ch;margin:14px 0 22px;color:var(--muted)}
 .links{display:flex;flex-wrap:wrap;gap:10px}
 .btn{display:inline-block;padding:10px 18px;border:2px solid var(--accent);color:var(--accent);text-decoration:none;font-weight:600;background:var(--paper)}
 .btn.primary{background:var(--accent);color:var(--accent-ink)}
 .btn:hover{text-decoration:underline}
+.reach{margin:18px 0 0;display:flex;flex-wrap:wrap;gap:6px 18px;font-size:.98rem}
+
+.dash{background:var(--paper);border:1px solid var(--line);padding:18px}
+.dash h2{font-size:1.05rem}
+.dash .note{margin:2px 0 14px;color:var(--muted);font-size:.85rem}
+.kpis{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:16px}
+.kpi{border:1px solid var(--line);padding:8px 10px;background:var(--bg)}
+.kpi b{display:block;font-family:var(--head);font-size:1.25rem;line-height:1.1;color:var(--accent)}
+.kpi span{font-size:.8rem;color:var(--muted)}
+.barsTitle{font-size:.85rem;color:var(--muted);margin:0 0 6px}
+.bar{display:grid;grid-template-columns:104px 1fr 34px;gap:8px;align-items:center;font-size:.8rem;line-height:1.7}
+.bar .name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted)}
+.bar .track{height:10px;background:var(--bg)}
+.bar .fill{height:100%;background:var(--accent)}
+.bar.low .fill{background:var(--warn)}
+.bar .val{text-align:right;font-variant-numeric:tabular-nums}
 
 section{padding:52px 0;border-bottom:1px solid var(--line)}
 section>.wrap>h2{font-size:1.9rem;margin-bottom:26px}
@@ -101,18 +107,24 @@ section>.wrap>h2{font-size:1.9rem;margin-bottom:26px}
 .edu h3{font-size:1.05rem;margin:18px 0 8px}
 .edu h3:first-child{margin-top:0}
 .edu p{margin:0}
+
+/* Contact */
+.reachlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:12px;margin:0 0 22px}
+.reachlist div{background:var(--paper);border:1px solid var(--line);padding:12px 16px}
+.reachlist span{display:block;font-size:.85rem;color:var(--muted)}
+.reachlist a{font-weight:600;overflow-wrap:anywhere}
 footer{padding:36px 0 60px;color:var(--muted);font-size:.95rem}
+@media (max-width:820px){
+  .herogrid{grid-template-columns:1fr;gap:28px}
+}
 @media (max-width:640px){
   .job{grid-template-columns:1fr}
   .nav strong{display:none}
   .nav ul{margin-left:0}
-  .cols span:nth-child(n+5){display:none}
-  .cols{grid-template-columns:36px repeat(3,1fr)}
-  .hero{background-size:48px 40px}
   .stat{border-right:0;border-bottom:1px solid var(--line)}
   .stat:last-child{border-bottom:0}
 }
-@media print{.hero{background:none}.nav{display:none}.btn{border:0}}
+@media print{.nav{display:none}.btn{border:0}}
 </style>
 </head>
 <body>
@@ -130,16 +142,16 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:.95rem}
 </div></nav>
 
 <header class="hero">
-  <div class="wrap">
-    <div class="sheet" aria-hidden="true">
-      <div class="fbar"><span class="fx">fx</span><span id="formula"></span></div>
-      <div class="cols"><span></span><span>A</span><span>B</span><span>C</span><span>D</span><span>E</span></div>
+  <div class="wrap herogrid">
+    <div>
+      <div class="badge" id="badge"></div>
+      <h1 id="name"></h1>
+      <p class="role" id="role"></p>
+      <p class="lede" id="intro"></p>
+      <div class="links" id="links"></div>
+      <p class="reach" id="reach"></p>
     </div>
-    <div class="badge" id="badge"></div>
-    <h1><span class="cell" id="name"></span></h1>
-    <p class="role" id="role"></p>
-    <p class="lede" id="intro"></p>
-    <div class="links" id="links"></div>
+    <aside class="dash" id="dash" aria-label="Sample dashboard from my Power BI project"></aside>
   </div>
 </header>
 
@@ -173,7 +185,8 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:.95rem}
 
   <section id="contact" style="border-bottom:0"><div class="wrap">
     <h2>Contact</h2>
-    <p>Hiring for an analytics or operations role? Send me a message or download my CV.</p>
+    <p>Hiring for an analytics or operations role? Reach me any of these ways.</p>
+    <div class="reachlist" id="reachList"></div>
     <div class="links" id="contactLinks"></div>
   </div></section>
 </main>
@@ -188,29 +201,52 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:.95rem}
   function el(tag, cls, text){var e=document.createElement(tag); if(cls) e.className=cls; if(text!=null) e.textContent=text; return e}
   function list(items, cls){var ul=el("ul",cls); (items||[]).forEach(function(t){ul.appendChild(el("li",null,t))}); return ul}
   function link(label, url, primary, download){var a=el("a","btn"+(primary?" primary":""),label); a.href=url; if(/^https?:/.test(url)){a.target="_blank"; a.rel="noopener"} if(download) a.setAttribute("download",""); return a}
+  function plain(label, url){var a=el("a",null,label); a.href=url; if(/^https?:/.test(url)){a.target="_blank"; a.rel="noopener"} return a}
+  var telHref = S.phone ? "tel:" + S.phone.replace(/[^+\d]/g,"") : "";
+  var waHref = S.whatsapp ? "https://wa.me/" + S.whatsapp : "";
 
   document.title = S.name + " | " + S.role;
   $("navName").textContent = S.name;
-  $("formula").textContent = S.formula || "";
   if (S.badge) $("badge").textContent = S.badge; else $("badge").style.display="none";
   $("name").textContent = S.name;
   $("role").textContent = S.role + (S.location ? ", " + S.location : "");
   $("intro").textContent = S.intro || "";
 
-  var links = $("links"), contact = $("contactLinks");
+  // Hero buttons and quick contact line
+  var links = $("links");
   links.appendChild(link("See my projects", "#projects", true));
   if (S.cv) links.appendChild(link("Download CV", S.cv, false, true));
   if (S.linkedin) links.appendChild(link("LinkedIn", S.linkedin));
   if (S.github) links.appendChild(link("GitHub", S.github));
-  if (S.email) contact.appendChild(link(S.email, "mailto:" + S.email, true));
-  if (S.cv) contact.appendChild(link("Download CV", S.cv, false, true));
-  if (S.linkedin) contact.appendChild(link("LinkedIn", S.linkedin));
-  if (S.github) contact.appendChild(link("GitHub", S.github));
+  var reach = $("reach");
+  if (S.email) reach.appendChild(plain(S.email, "mailto:" + S.email));
+  if (S.phone) reach.appendChild(plain(S.phone, telHref));
+
+  // Hero dashboard, drawn from SITE.heroChart
+  var h = S.heroChart;
+  if (h){
+    var d = $("dash");
+    d.appendChild(el("h2",null,h.title));
+    d.appendChild(el("p","note",h.note));
+    var k = el("div","kpis");
+    (h.kpis||[]).forEach(function(x){ var c=el("div","kpi"); c.appendChild(el("b",null,x.value)); c.appendChild(el("span",null,x.label)); k.appendChild(c) });
+    d.appendChild(k);
+    d.appendChild(el("p","barsTitle",h.barsTitle));
+    var max = Math.max.apply(null, (h.bars||[]).map(function(b){return b[1]}));
+    var min = Math.min.apply(null, (h.bars||[]).map(function(b){return b[1]}));
+    (h.bars||[]).forEach(function(b){
+      var r = el("div","bar"+(b[1]===min?" low":""));
+      r.appendChild(el("span","name",b[0]));
+      var t = el("span","track"), f = el("span","fill"); f.style.display="block"; f.style.width=(b[1]/max*100)+"%"; t.appendChild(f);
+      r.appendChild(t); r.appendChild(el("span","val",String(b[1])));
+      d.appendChild(r);
+    });
+  } else { $("dash").style.display="none"; }
 
   // About
   (S.about||[]).forEach(function(t){ $("aboutText").appendChild(el("p",null,t)) });
-  (S.stats||[]).forEach(function(s){ var d=el("div","stat"); d.appendChild(el("b",null,s.value)); d.appendChild(el("span",null,s.label)); $("stats").appendChild(d) });
-  (S.how||[]).forEach(function(h){ var d=el("div"); d.appendChild(el("h3",null,h.title)); d.appendChild(el("p",null,h.text)); $("how").appendChild(d) });
+  (S.stats||[]).forEach(function(s){ var x=el("div","stat"); x.appendChild(el("b",null,s.value)); x.appendChild(el("span",null,s.label)); $("stats").appendChild(x) });
+  (S.how||[]).forEach(function(c){ var x=el("div"); x.appendChild(el("h3",null,c.title)); x.appendChild(el("p",null,c.text)); $("how").appendChild(x) });
 
   // Projects
   P.forEach(function(p){
@@ -246,20 +282,30 @@ footer{padding:36px 0 60px;color:var(--muted);font-size:.95rem}
   (S.experience||[]).forEach(function(j){
     var r = el("div","job");
     r.appendChild(el("div","when",j.when));
-    var d = el("div"); d.appendChild(el("h3",null,j.title+", "+j.company));
-    if (j.summary) d.appendChild(el("p",null,j.summary));
-    if (j.points && j.points.length) d.appendChild(list(j.points));
-    r.appendChild(d); $("jobList").appendChild(r);
+    var x = el("div"); x.appendChild(el("h3",null,j.title+", "+j.company));
+    if (j.summary) x.appendChild(el("p",null,j.summary));
+    if (j.points && j.points.length) x.appendChild(list(j.points));
+    r.appendChild(x); $("jobList").appendChild(r);
   });
 
   // Skills and education
   (S.skills||[]).forEach(function(g){
-    var d = el("div"); d.appendChild(el("h3",null,g.group)); d.appendChild(list(g.items)); $("skillList").appendChild(d);
+    var x = el("div"); x.appendChild(el("h3",null,g.group)); x.appendChild(list(g.items)); $("skillList").appendChild(x);
   });
   var edu = $("eduList");
   if (S.education && S.education.length){ edu.appendChild(el("h3",null,"Education")); edu.appendChild(list(S.education)); }
   if (S.certifications && S.certifications.length){ edu.appendChild(el("h3",null,"Certificates")); edu.appendChild(list(S.certifications)); }
   if (S.languages){ edu.appendChild(el("h3",null,"Languages")); edu.appendChild(el("p",null,S.languages)); }
+
+  // Contact section
+  var rl = $("reachList");
+  function item(label, text, url){ var x=el("div"); x.appendChild(el("span",null,label)); x.appendChild(plain(text,url)); rl.appendChild(x) }
+  if (S.email) item("Email", S.email, "mailto:" + S.email);
+  if (S.phone) item("Phone", S.phone, telHref);
+  if (S.whatsapp) item("WhatsApp", "Message me", waHref);
+  if (S.linkedin) item("LinkedIn", "linkedin.com/in/abanoub-barsoum", S.linkedin);
+  var cl = $("contactLinks");
+  if (S.cv) cl.appendChild(link("Download CV", S.cv, true, true));
 
   $("foot").textContent = "\u00A9 " + new Date().getFullYear() + " " + S.name + ". Updated as I finish new projects.";
 
