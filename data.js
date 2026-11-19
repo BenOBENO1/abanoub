@@ -139,7 +139,7 @@ window.PROJECTS = [
       { src: "time-by-stage.png",  caption: "Operations: time by stage, ETA vs late rate, hourly heatmap",              alt: "Operations page of the Power BI report" }
     ],
     links: [
-      { label: "Read the report (PDF)", url: "delivery_analysis_report_EN.pdf" },   // paste the link, or leave empty to hide the button
+      { label: "Read the story", url: "delivery_analysis_report_EN.pdf" },   // paste the link, or leave empty to hide the button
       { label: "View on GitHub", url: "" }
     ]
   },
