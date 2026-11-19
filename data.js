@@ -117,6 +117,32 @@ window.SITE = {
 };
 
 window.PROJECTS = [
+   {
+    title: "Where does delivery time go? Analysis of 5,422 food delivery orders",
+    date: "November 2026",
+    note: "Case study on one month of real order data, anonymized (company, restaurant and customer details removed)",
+    summary: "An analysis of one month of order data from a food delivery platform: cleaning the raw export, measuring where order time is spent, checking whether late orders are really late, and looking at repeat customers and concentration risk.",
+    problem: "Why do so many orders count as late, and where does the time actually go?",
+    tools: ["Power BI", "Power Query", "DAX"],   // keep only the tools you actually used
+    findings: [
+      "The platform handled 5,422 orders in April 2025, with EGP 4.55M in food sales and an average food order of EGP 840 (delivery fees excluded).",
+      "Driving is not the bottleneck: the last mile takes a median of 9.5 minutes, while the wait between restaurant acceptance and pickup takes 28 minutes, 63% of the 45-minute median order time.",
+      "77% of orders count as late against the promised ETA, but orders promised in 15 minutes are late 99% of the time and those promised in 60 minutes only 26%, with similar actual times (about 42 to 51 minutes). Much of the lateness comes from the ETA, not from execution.",
+      "About 20% of orders have no ETA at all, and 24% of orders take longer than 60 minutes.",
+      "49% of customers ordered once. Repeat customers placed 82% of orders and spent about EGP 3,857 in the month versus EGP 983 for one-time customers.",
+      "Orders are concentrated: the top 10 restaurants take 49% of orders, the top 10 drivers carry 67%, and 99.7% of payments are cash or card on delivery."
+    ],
+    images: [
+      { src: "orders per day and hours.png",    caption: "Overview: sales, orders per day and peak hours",           alt: "Overview page of the Power BI report" },
+      { src: "customers.png",   caption: "Customers: new vs returning orders and spend by segment",                  alt: "Customers page of the Power BI report" },
+      { src: "concentration.png", caption: "Restaurants: concentration and scorecard",                                 alt: "Restaurants page of the Power BI report" },
+      { src: "time-by-stage.png",  caption: "Operations: time by stage, ETA vs late rate, hourly heatmap",              alt: "Operations page of the Power BI report" }
+    ],
+    links: [
+      { label: "Read the report (PDF)", url: "file:///C:/Users/abano/Downloads/delivery_analysis_report_EN.pdf" },   // paste the link, or leave empty to hide the button
+      { label: "View on GitHub", url: "" }
+    ]
+  },
   {
     title: "Performance comparison across 10 restaurant branches",
     date: "November 2026",
