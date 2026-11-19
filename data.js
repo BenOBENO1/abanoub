@@ -117,6 +117,25 @@ window.SITE = {
 };
 
 window.PROJECTS = [
+     {
+    title: "Project name",
+    date: "December 2026",
+    note: "Practice project on a synthetic dataset",
+    summary: "One or two sentences on what the project does.",
+    problem: "The business question you tried to answer.",
+    tools: ["Power BI", "SQL", "Excel"],
+    findings: [
+      "First finding, with a number.",
+      "Second finding, with a number.",
+      "Third finding, with a number."
+    ],
+    images: [
+      { src: "bnpl-overview.png", caption: "Overview page", alt: "Overview page of the report" }
+    ],
+    links: [
+      { label: "View on GitHub", url: "" }
+    ]
+  },
   {
     title: "Performance comparison across 10 restaurant branches",
     date: "November 2026",
