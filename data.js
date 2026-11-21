@@ -143,7 +143,7 @@ window.PROJECTS = [
       { src: "concentration.png",      caption: "How concentrated orders and payments are", alt: "Concentration of orders and payments" }
     ],
     links: [
-      { label: "Read the full case study", url: "delivery_analsis_report_EN.pdf" }
+      { label: "Read the full case study", url: "delivery_analysis_report_EN.pdf" }
     ]
   },
   {
