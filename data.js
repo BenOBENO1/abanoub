@@ -14,7 +14,7 @@ window.SITE = {
   intro: "I cover the full order cycle on a food delivery marketplace, from rider dispatch to cash settlement, and turn that data into Excel and Power BI reports that management uses.",
 
   email: "abanoubbarsoum7@gmail.com",
-  linkedin: "https://www.linkedin.com/in/abanoub-barsoum",
+  linkedin: "www.linkedin.com/in/abanoub-barsoum-655800202",
   phone: "+20 128 889 3296",
   whatsapp: "201288893296",        // number only, with country code, for the WhatsApp button
   github: "",                       // add your GitHub URL here when you have it
