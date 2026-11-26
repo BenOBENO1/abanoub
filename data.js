@@ -18,7 +18,7 @@ window.SITE = {
   phone: "+20 128 889 3296",
   whatsapp: "201288893296",        // number only, with country code, for the WhatsApp button
   github: "",                       // add your GitHub URL here when you have it
-  cv: "Abanoub_Barsoum_CV.pdf",
+  cv: "abanoub barsoum.pdf",
 
   // After you create a free account at goatcounter.com, put your site code here.
   // Example: if your dashboard is abanoub.goatcounter.com, write "abanoub".
