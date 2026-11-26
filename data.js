@@ -9,12 +9,12 @@
 window.SITE = {
   name: "Abanoub Barsoum",
   badge: "Open to new roles",
-  role: "E-commerce Operations Analyst",
-  location: "Egypt",
-  intro: "I cover the full order cycle on a food delivery marketplace, from rider dispatch to cash settlement, and turn that data into Excel and Power BI reports that management uses.",
+  role: "E-commerce Operations & Vendor Management Analyst",
+  location: "Alexandria, Egypt",
+  intro: "I have worked across the full lifecycle of a food delivery marketplace: dispatch, restaurant acquisition and account management, and financial settlement. I turn that data into Excel and Power BI reports that management uses.",
 
   email: "abanoubbarsoum7@gmail.com",
-  linkedin: "http://www.linkedin.com/in/abanoub-barsoum-655800202",
+  linkedin: "https://www.linkedin.com/in/abanoub-barsoum-655800202",
   phone: "+20 128 889 3296",
   whatsapp: "201288893296",        // number only, with country code, for the WhatsApp button
   github: "",                       // add your GitHub URL here when you have it
@@ -32,11 +32,11 @@ window.SITE = {
   photo: "",
 
   about: [
-    "I work on a food delivery marketplace across the whole order cycle. I coordinated 150 daily orders, rising to 550 in peak season, then moved into the finance side of the same platform, where I reconcile cash on delivery, POS and online banking receipts against platform sales above EGP 10 million and invoice more than 65 restaurant merchants.",
-    "I build Excel and Power BI reports that track delivery performance, payment channel mix and merchant revenue. My Industrial Engineering background shapes how I look at both order flow and financial controls."
+    "E-commerce operations professional who has worked across the full lifecycle of a food delivery marketplace: order dispatch, restaurant acquisition and account management, and financial settlement. I personally acquired 20+ restaurant partners, growing the platform's merchant base to 65+ active vendors, then managed their commissions, invoicing and performance. I coordinated 150 daily orders, rising to 550 in peak season, and reconciled cash on delivery, POS and online banking receipts against platform sales exceeding EGP 10 million.",
+    "I build Excel reports and Power BI dashboards (DAX, Power Query) that track delivery performance, payment channel mix and merchant revenue, turning operational data into insights for management. My Industrial Engineering background drives a process-improvement approach to order flow, vendor operations and financial controls."
   ],
 
-  stats: [
+    stats: [
     { value: "550", label: "orders a day coordinated in peak season" },
     { value: "65+", label: "restaurant merchants invoiced for commission" },
     { value: "EGP 10M+", label: "platform sales reconciled against receipts" }
@@ -51,15 +51,21 @@ window.SITE = {
   experience: [
     {
       when: "Feb 2025 to present",
-      title: "Operations Analyst",
+      title: "Operations Analyst | Vendor Acquisition & Management",
       company: "Yalla Order, El Gouna",
-      summary: "Finance and operations analysis on a food delivery marketplace.",
+      summary: "Vendor acquisition, merchant management, finance and operations analysis on a food delivery marketplace.",
       points: [
-        "Close daily accounts for 20 riders, rising to 35 in peak periods, and investigate cash shortfalls with Operations.",
-        "Reconcile cash on delivery, POS and online banking receipts against platform order records.",
-        "Prepare and validate commission invoices for more than 65 restaurant merchants and standardize the invoicing procedure.",
-        "Build Excel reports and dashboards that track financial and operational KPIs and support management decisions.",
-        "Monitor expenditure and cash flow against budget, and flag variances for management review."
+        "Acquired and onboarded 20+ new restaurant partners, growing the merchant base to 65+ active vendors on the platform.",
+        "Negotiated commission rates and promotional terms with restaurant owners, balancing platform margins with merchant retention.",
+        "Led merchant onboarding, including menu setup, pricing and platform configuration, to bring new restaurants live.",
+        "Managed day-to-day relationships with 65+ merchants, resolving payment, order and commission queries directly with restaurant owners.",
+        "Tracked merchant performance (order volume, revenue, delays, cancellations) to identify underperforming vendors and growth opportunities for management.",
+        "Prepared and validated commission invoices for 65+ merchants, standardizing invoicing and reconciliation procedures and reviewing a team member's entries.",
+        "Reconciled cash on delivery, POS and online banking receipts against platform order records (sales exceeding EGP 10 million), investigating discrepancies.",
+        "Closed daily accounts for 20 riders (35 in peak periods) and coordinated with Operations to investigate cash shortfalls and recover outstanding amounts.",
+        "Processed rider and operations payroll, verifying worked hours, deductions and recovered amounts before payment.",
+        "Developed Excel reports and dashboards tracking financial and operational KPIs, merchant revenue and payment channel mix to support management decisions.",
+        "Monitored expenditure and cash flow against budget, investigating variances and flagging issues for management review."
       ]
     },
     {
@@ -68,9 +74,12 @@ window.SITE = {
       company: "Yalla Order, El Gouna",
       summary: "Daily order coordination and rider dispatch.",
       points: [
-        "Coordinated 150+ orders a day, and 450 to 550 a day in peak season.",
-        "Designed peak-hour staffing plans to match rider availability to the busiest delivery periods.",
-        "Tracked delivery performance metrics and reported improvement opportunities to management."
+        "Coordinated 150+ daily orders, handling 450 to 550 orders per day during peak season.",
+        "Dispatched riders according to restaurant proximity to support timely pickups and deliveries.",
+        "Designed peak-hour staffing plans to align rider availability with the busiest delivery periods.",
+        "Resolved rider issues, including vehicle breakdowns and route difficulties, to maintain delivery continuity.",
+        "Tracked delivery performance metrics and reported operational improvement opportunities to management.",
+        "Liaised with riders, restaurant partners and internal teams to resolve order issues."
       ]
     },
     {
@@ -79,24 +88,19 @@ window.SITE = {
       company: "Orange, Sohag",
       summary: "High-volume customer support in a retail environment.",
       points: [
-        "Resolved complaints through to closure and reported recurring issues to support service improvements."
-      ]
-    },
-    {
-      when: "Oct 2021 to Mar 2022",
-      title: "Production Engineer",
-      company: "Arab Company for Paper Industry, Sohag",
-      summary: "Production monitoring and quality checks.",
-      points: [
-        "Monitored production performance against standards and prepared production schedules."
+        "Handled customer inquiries in person and by phone in a high-volume retail environment.",
+        "Resolved customer complaints and followed issues through to closure.",
+        "Recommended products and services based on each customer's requirements.",
+        "Monitored customer satisfaction to identify service concerns.",
+        "Reported recurring complaints to the team to support service improvements."
       ]
     }
   ],
 
   skills: [
-    { group: "Analysis and reporting", items: ["Excel: Pivot Tables, XLOOKUP, VLOOKUP, SUMIFS", "Power BI: DAX, Power Query, data modelling", "Google Sheets and Forms: survey design and analysis", "SQL: querying, joins and filtering"] },
-    { group: "Marketplace operations", items: ["Order management and rider dispatch", "Cost per order, average order value, fulfillment rate", "Capacity and peak-hour planning"] },
-    { group: "Finance operations", items: ["Cash and payment reconciliation", "Merchant invoicing and commission calculation", "Budget and cash flow monitoring"] }
+    { group: "Vendor and marketplace", items: ["Vendor acquisition and merchant onboarding", "Commission negotiation and account management", "Merchant performance tracking", "Order management and rider dispatch", "Cost per order, average order value, fulfillment rate", "Capacity planning"] },
+    { group: "Finance operations", items: ["Cash and payment reconciliation", "Merchant invoicing and commission calculation", "Budget and cash flow monitoring"] },
+    { group: "Analysis and reporting", items: ["Excel: Pivot Tables, XLOOKUP, VLOOKUP, SUMIFS, IF", "Power BI: DAX, Power Query, data cleaning, data modelling, data validation", "Google Sheets and Forms: survey design and analysis", "SQL: basic querying, joins and filtering"] }
   ],
 
   education: [
